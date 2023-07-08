@@ -1,28 +1,25 @@
 .container-2x {
 	margin-top: 50px;
 	display: flex;
-	margin-left: 15%;
-	/* border: 1px solid black; */
 	justify-content: space-evenly;
-	height: 450px;
-	width: 80%;
-
+	height: 550px;
+	width: 550px;
+	flex-direction: row;
+	/* background-color: black; */
 	flex-wrap: wrap;
-	gap: 10px;
+	gap: 20px;
+	padding: 0;
+	justify-content: space-between;
 }
 
 .container-slim-2x {
 	display: flex;
-	margin-left: 15%;
+	padding-left: 10%;
 	padding-top: 50px;
-	/* border: 1px solid black; */
-	justify-content: space-evenly;
 	height: 200px;
-
-	width: 80%;
-	background-color: white;
+	width: 100%;
 	flex-wrap: wrap;
-	gap: 10px;
+	justify-content: space-evenly;
 }
 
 .container-3x {
@@ -80,11 +77,65 @@ h1 {
 
 .chart-box {
 	border: 1px solid rgb(211, 205, 205);
-	width: 45%;
+	width: 100%;
 	margin: 5px;
 	border-radius: 10px;
-
+	position: relative;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+.slimchart_box {
+	display: flex;
+	justify-content: space-evenly;
+	width: 80%;
+	height: 100%;
+	gap: 10px;
+	flex-direction: row;
+}
+.FaExpand {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+}
+
+.blur {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(255, 255, 255, 0.768);
+	z-index: 99;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.container-2x1 {
+	/* background-color: aqua; */
+	height: 700px;
+	width: 1200px;
+}
+.chart-box1 {
+	/* background-color: black; */
+	position: relative;
+	height: 700px;
+	width: 1200px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid #555;
+	padding: 120px;
+	border-radius: 20px;
+	background-color: white;
+}
+
+.MdCloseFullscreen {
+	position: absolute;
+	top: 10px;
+	right: 20px;
+	font-size: x-large;
+	color: #555;
 }

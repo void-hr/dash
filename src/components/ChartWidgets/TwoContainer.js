@@ -1,10 +1,11 @@
-import React from "react";
 import "./style.css";
 // import {Bar} from 'react-chartjs-2';
 // import { useState } from 'react';
 // import {Chart as ChartJS} from 'chart.js/auto'
 import video from "../../Assets/video.mp4";
-
+import { MdCloseFullscreen } from "react-icons/md";
+import { useState } from "react";
+import { FaExpand } from "react-icons/fa";
 import { Bar } from "react-chartjs-2";
 import {
 	Chart as ChartJS,
@@ -18,6 +19,8 @@ import {
 ChartJS.register(BarElement, CategoryScale, LinearScale, Tooltip, Legend);
 
 export default function TwoContainer() {
+	const [isActive, setIsActive] = useState(false);
+
 	// let data = [1,2,3,4,5];
 	// cons t [userData, setUserData] = useState({
 	//     labels: ['one', 'two', 'three'],
@@ -49,14 +52,31 @@ export default function TwoContainer() {
 
 	const options = {};
 	return (
-		<div className="container-2x">
-			<div className="chart-box">
-				<Bar data={data} opitons={options} />
-			</div>
-
-			<div className="chart-box">
-				<Bar data={data} opitons={options} />
-			</div>
-		</div>
+		<>
+			{!isActive && (
+				<div className="container-2x">
+					<div className="chart-box">
+						<div className="FaExpand" onClick={() => setIsActive(true)}>
+							<FaExpand />
+						</div>
+						<Bar data={data} opitons={options} />
+					</div>
+				</div>
+			)}
+			{isActive && (
+				<div className="blur">
+					<div className="container-2x1">
+						<div className="chart-box1 ">
+							<div
+								className="MdCloseFullscreen"
+								onClick={() => setIsActive(false)}>
+								<MdCloseFullscreen />
+							</div>
+							<Bar data={data} opitons={options} />
+						</div>
+					</div>
+				</div>
+			)}
+		</>
 	);
 }

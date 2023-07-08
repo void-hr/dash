@@ -5,7 +5,7 @@ import video from "../../Assets/video.mp4";
 export default function SlimContainer() {
 	return (
 		<div className="container-slim-2x">
-			<div className="chart-box">
+			<div className="slimchart_box">
 				<div className="video-div-container">
 					<div className="video-div">
 						<video autoPlay loop muted>
@@ -13,8 +13,8 @@ export default function SlimContainer() {
 						</video>
 					</div>
 				</div>
+				<div className="chart-box"></div>
 			</div>
-			<div className="chart-box"></div>
 		</div>
 	);
 }
